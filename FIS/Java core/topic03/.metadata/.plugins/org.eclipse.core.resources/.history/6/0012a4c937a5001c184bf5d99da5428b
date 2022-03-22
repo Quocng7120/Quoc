@@ -1,0 +1,9 @@
+package fis.topic03.exercise02;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class ServerControl {
+	 private int port;
+	 private Set<String> userNames =new HashSet<>();
+}

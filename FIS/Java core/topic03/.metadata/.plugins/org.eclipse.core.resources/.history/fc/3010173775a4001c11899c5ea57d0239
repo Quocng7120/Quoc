@@ -1,0 +1,8 @@
+package fis.topic03.exercise01;
+
+public class GiaoDich {
+	private int id;
+	private String soTaiKhoanGui;
+	private String soTaiKhoanNhan;
+	private double soTien;
+}

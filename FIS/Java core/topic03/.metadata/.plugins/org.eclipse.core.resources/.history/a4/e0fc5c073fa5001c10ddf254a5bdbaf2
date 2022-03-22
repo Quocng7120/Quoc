@@ -1,0 +1,22 @@
+package fis.topic03.exercise02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QuanLyCauHoi {
+	private List<CauHoi> listCauHoi=new ArrayList<CauHoi>();
+	public void addCauHoi(CauHoi cauHoi) {
+		listCauHoi.add(cauHoi);
+	}
+	public int checkTuongDong(String s) {
+		List<TuongDong> listTuongDong=new ArrayList<TuongDong>();
+		String[] list=s.split(" ");
+		for(CauHoi c:listCauHoi) {
+			int dem=0;
+			for (int i = 0; i < list.length; i++) {
+				if(c.getCauHoi().contains(list[i])) dem++; 
+			}
+			
+		}
+	}
+}

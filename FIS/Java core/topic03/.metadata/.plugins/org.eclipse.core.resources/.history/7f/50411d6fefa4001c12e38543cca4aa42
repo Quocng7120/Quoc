@@ -1,0 +1,14 @@
+package fis.topic03.pratice02;
+
+import javax.swing.JPanel;
+
+public class ChatPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public ChatPanel() {
+
+	}
+
+}

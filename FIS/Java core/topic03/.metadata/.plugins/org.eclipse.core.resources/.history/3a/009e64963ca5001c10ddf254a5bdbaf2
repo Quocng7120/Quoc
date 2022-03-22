@@ -1,0 +1,7 @@
+package fis.topic03.exercise02;
+
+public class Main {
+	String s="a b c";
+	String[] list=s.split(" ");
+	for(int i=0; i<list.)
+}

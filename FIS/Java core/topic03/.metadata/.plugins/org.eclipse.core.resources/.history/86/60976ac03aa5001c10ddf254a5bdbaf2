@@ -1,0 +1,14 @@
+package fis.topic03.exercise02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QuanLyCauHoi {
+	private List<CauHoi> listCauHoi=new ArrayList<CauHoi>();
+	public void addCauHoi(CauHoi cauHoi) {
+		listCauHoi.add(cauHoi);
+	}
+	public int checkGiong(String s) {
+		
+	}
+}

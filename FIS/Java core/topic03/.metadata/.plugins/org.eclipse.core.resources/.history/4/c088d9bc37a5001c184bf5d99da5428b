@@ -1,0 +1,6 @@
+package fis.topic03.exercise02;
+
+public class ServerControl {
+	 private int port;
+	 private Set<String> userNames =new HashS
+}

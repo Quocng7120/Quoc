@@ -1,0 +1,10 @@
+[PropertyInfo]
+dsMonHoc,java.util.List,false,false, , ,false,<default>
+ngayDuocDuyet,java.util.Calendar,false,false, , ,false,<default>
+SINGLETON,model.ChuongTrinhHoc,false,false, , ,false,<default>
+ten,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

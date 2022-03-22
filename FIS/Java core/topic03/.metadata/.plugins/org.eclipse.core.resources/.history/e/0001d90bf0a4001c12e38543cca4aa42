@@ -1,0 +1,62 @@
+package fis.topic03.pratice02;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.net.Socket;
+
+import javax.swing.JPanel;
+
+public class ChatPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+
+	public ChatPanel(Socket s, String sender, String receiver) {
+		try {
+		    //Khởi tạo các Components cho giao diện đồ họa
+		    initComponents();
+		    
+		    //Truyền socket(Socket này sẽ được tạo sau)
+		    socket = s;
+		    
+		    //Nhận tên người gửi và người nhận
+		    this.sender = sender;
+		    this.receiver = receiver;
+		    
+		    //Tạo các bộ đệm để gửi và nhận tin nhắn
+		    bf = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		    os = new DataOutputStream(socket.getOutputStream());
+		} catch (Exception e) {
+		    System.out.println("Error while create Main Panel");
+		}
+
+	    }
+	btnNewButton.addActionListener(new ActionListener() {
+		//Một Action Listener để gửi tin nhắn đi mỗi khi người dùng ấn nút SEND
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+		    // Kiểm tra xem người dùng nhập tin nhắn hay chưa
+		    if (inputMess.getText().isEmpty()) return;
+		    try {
+			// Ghi dữ liệu từ ô nhập tin nhắn vào "bộ đệm của của socket"
+                        // để sau này chúng ta có thể lấy dữ liệu này từ server
+			os.writeBytes(inputMess.getText());
+			// Xuống Dòng + Xóa bộ đệm
+			os.write(13);
+			os.write(10);
+			os.flush();
+
+			// Ghi dữ liệu vào textArea ở phía trên
+			displayChattingHistory.append("\n" + sender + ": " + inputMess.getText());
+
+			// Xóa hết tin nhắn tại ô nhập tin nhắn
+			inputMess.setText("");
+		    } catch (Exception e) {
+			System.out.println("Error while sendding messeger");
+		    }
+		}
+});
+
+}

@@ -1,0 +1,34 @@
+package fis.topic03.pratice02;
+
+import java.net.Socket;
+
+import javax.swing.JPanel;
+
+public class ChatPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+
+	public ChatPanel(Socket s, String sender, String receiver) {
+		try {
+		    //Khởi tạo các Components cho giao diện đồ họa
+		    initComponents();
+		    
+		    //Truyền socket(Socket này sẽ được tạo sau)
+		    socket = s;
+		    
+		    //Nhận tên người gửi và người nhận
+		    this.sender = sender;
+		    this.receiver = receiver;
+		    
+		    //Tạo các bộ đệm để gửi và nhận tin nhắn
+		    bf = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		    os = new DataOutputStream(socket.getOutputStream());
+		} catch (Exception e) {
+		    System.out.println("Error while create Main Panel");
+		}
+
+	    }
+
+}

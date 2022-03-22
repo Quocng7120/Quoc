@@ -1,0 +1,12 @@
+package fis.topic03.exercise02;
+
+import java.util.List;
+
+public class Main {
+	String s="a b c";
+	String[] x=s.split(" ");
+	list.
+	for(int i=0; i<lis;i++) {
+		
+	}
+}

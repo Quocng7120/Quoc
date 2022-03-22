@@ -1,0 +1,12 @@
+package fis.topic03.exercise02;
+
+import java.util.List;
+
+public class Main {
+	String s="a b c";
+	String[] x=s.split(" ");
+	int arrayLength = x.length;
+	for(int i=0; i<10;i++) {
+		System.out.println("a");
+	}
+}

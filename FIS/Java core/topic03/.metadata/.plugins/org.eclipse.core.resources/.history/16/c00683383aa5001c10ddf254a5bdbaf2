@@ -1,0 +1,7 @@
+package fis.topic03.exercise02;
+
+public class CauHoi {
+	private int id;
+	private String cauHoi;
+	private String cauTraLoi;
+}

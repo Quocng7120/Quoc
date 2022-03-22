@@ -1,0 +1,9 @@
+[PropertyInfo]
+dotDangKy,model.DotDangKyHocPhan,false,false, , ,false,<default>
+dsMonHoc,java.util.List,false,false, , ,false,<default>
+sv,model.SinhVien,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

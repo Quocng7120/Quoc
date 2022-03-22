@@ -1,0 +1,34 @@
+package fis.topic03.exercise02;
+
+public class TuongDong implements Comparable<TuongDong>{
+	private int idCauHoi;
+	private int doTuongDong;
+	public TuongDong() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public TuongDong(int idCauHoi, int doTuongDong) {
+		super();
+		this.idCauHoi = idCauHoi;
+		this.doTuongDong = doTuongDong;
+	}
+	
+	public int getIdCauHoi() {
+		return idCauHoi;
+	}
+	public void setIdCauHoi(int idCauHoi) {
+		this.idCauHoi = idCauHoi;
+	}
+	public int getDoTuongDong() {
+		return doTuongDong;
+	}
+	public void setDoTuongDong(int doTuongDong) {
+		this.doTuongDong = doTuongDong;
+	}
+	@Override
+	public int compareTo(TuongDong o) {
+		// TODO Auto-generated method stub
+		return o.getDoTuongDong()-this.doTuongDong;
+	}
+	
+}
