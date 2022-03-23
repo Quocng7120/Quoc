@@ -13,8 +13,9 @@ public class InsertDataExample {
 
         Statement statement = connection.createStatement();
 
-        String sql = "Insert into empty (empId, empNo, empName) "
-                + " values (2, 20000, 10000) ";
+        String sql = "Insert into `empty` (empId, empNo, empName) "
+                + " values (2, '20000', '10000') ";
+        System.out.println(sql);
 
         // Thực thi câu lệnh.
         // executeUpdate(String) sử dụng cho các loại lệnh Insert,Update,Delete.
