@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="MyConsole" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+
+
+
+
+    <appender name="AdminFileAppender" class="org.apache.log4j.FileAppender">
+        <param name="File" value="logs/admin.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d{dd MMM yyyy HH:mm:ss,SSS} {%t} %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="FrontEndFileAppender" class="org.apache.log4j.FileAppender">
+        <param name="File" value="logs/frontEnd.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d{dd MMM yyyy HH:mm:ss,SSS} {%t} %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+
+    <!-- logger name phải là tên của package! -->
+    <logger name="org.o7planning.tutorial.commonslogging.admin">
+        <level value="ERROR" />
+        <appender-ref ref="AdminFileAppender" />
+    </logger>
+
+    <!-- logger name phải là tên của package! -->
+    <logger name="org.o7planning.tutorial.commonslogging.frontend">
+        <level value="DEBUG" />
+        <appender-ref ref="FrontEndFileAppender" />
+    </logger>
+
+
+    <root>
+        <priority value="debug" />
+        <appender-ref ref="MyConsole" />
+    </root>
+
+</log4j:configuration>
