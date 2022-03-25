@@ -1,0 +1,22 @@
+server.port: 7888
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/fis_db_demo
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: training-pool
+      maximum-pool-size: 10
+      minimum-idle: 3
+  application.name: training-jpa
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+logging:
+  level:
+    com.zaxxer.hikari: debug
+    org.springframework.transaction: debug
