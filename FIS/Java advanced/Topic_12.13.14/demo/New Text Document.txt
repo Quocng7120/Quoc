@@ -1,0 +1,10 @@
+entity:
+Order
+Order list
+produce
+customer
+
+oder detail -> produce vs số lượng
+oder -> customer
+
+thêm xóa sửa update khách hàng, order, produce
