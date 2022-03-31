@@ -3,11 +3,13 @@ package fis.training.order.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
+
 
 @Data
 @Entity
 @Table(name = "Product")
-public class Product {
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +24,8 @@ public class Product {
 
     @Column(name = "note")
     private String 	note ;
+
+    @ManyToOne
+    @JoinColumn(name = "categoryId", referencedColumnName = "categoryId")
+    private Category category;
 }
